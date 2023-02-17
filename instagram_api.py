@@ -3,14 +3,13 @@ import json
 
 def getCreds():
     creds = dict()
-    creds['access_token'] = "EAAIPNfWMUEYBALmQHZAYo7AjtIer2GCeg7J3ZAi7jJnUsGb82yuRF4LYqTeAZAQdmFae67aLML80edFs9LglWWXSXwBUCtRqqUHcysExBgUpCVkL6abPHyqKwfCmLByWzxMt2UAJa4oHcZBvZA5Q0KVOSD3ooeeZCvuPIRpv6gG6ABichhWZAQBTScbwi4u0uAvxikCXF4PMZAaFXwiwOaaycfRLMzZB889gZD"
-    creds['client_id'] = "579674380718150"
-    creds['client_secret'] = "d6bbea1040aeb7c6d2ead66b88c87f66"
+    creds['access_token'] = "xxxxxxxxxxxxxxxxxx"
+    creds['client_id'] = "xxxxxxxxxxxxxxxxxxxxxxx"
+    creds['client_secret'] = "xxxxxxxxxxxxxxxxxxxxxxx"
     creds['graph_domain'] = "https://graph.facebook.com/"
     creds['graph_version'] = "v16.0"
     creds['endpoint_base'] = creds["graph_domain"] + creds['graph_version'] + "/"
-    creds['debug'] = 'no'
-    creds['page_id'] = "116913587984678"
+    creds['page_id'] = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
     creds['instagram_business_account'] = "17841458001179434"
     creds['post_url'] = creds['endpoint_base'] + creds['instagram_business_account'] + "/media"
     return creds
