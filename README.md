@@ -20,18 +20,7 @@ You will also need to create a developer account with Instagram and obtain your 
 To use the tool, run the following command:
 `python main.py`
 
-This will start the tool and begin posting to your Instagram account at the specified times.
-
-## Configuration
-
-To configure the tool, open the `config.ini` file and modify the following settings:
-
-* `client_id`: Your Instagram client ID.
-* `client_secret`: Your Instagram client secret.
-* `access_token`: Your Instagram access token.
-* `schedule`: A list of times at which to post, in the format `HH:MM:SS`.
-* `timezone`: The timezone to use for scheduling posts, in the format `Continent/City`.
-* `caption_length`: The length of the generated captions, in words.
+This will start the tool and begin posting to your Instagram account.
 
 ## Contributing
 
