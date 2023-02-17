@@ -1,6 +1,6 @@
 import openai
 
-API_KEY = "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"
+API_KEY = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 openai.api_key = API_KEY
 model = "text-davinci-003"
 
