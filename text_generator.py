@@ -1,36 +1,36 @@
-
+"""
 from faker import Faker
-
 def words_generator():
     fake = Faker()
     words = ""
-    for _ in range(10):
+    for _ in range(5):
         words += fake.word() + " "
     return words[:-1]
-
+"""
 def hashtags_generator(words):
     hashtags = ""
+    nb_hashtags = 20
     for word in words.split():
+        if (nb_hashtags == 29):
+            break
+        if len(word) < 3:
+            continue
         hashtags += " #" + word
-    hashtags +=""" #art #artwork #artistic #dalle #ai #openai #chatgpt #words #inspiration #inspiring #beautiful"""
-    return hashtags
+        nb_hashtags += 1
+    hashtags +=""" #art #artwork #artistic #dalle #ai #openai #chatgpt #words #inspiration #inspiring #beautiful #api #code #dev #iart #aiart #dalleart #artificial #intelligence"""
+    return hashtags[1:]
 
-def caption_generator(words, chatGPT_response):
-    caption = """Hey there!
+def caption_generator(chatGPT_response):
+    caption = """ChatGPT using text-davinci-003 generated this short paragraph: """ + chatGPT_response + """
 
-Look at this beautiful artwork created using these random words: """ + words.replace(" ", ", ")+ """.
-
-From theses words, ChatGPT using text-davinci-003 generated the following sentence: """ + chatGPT_response + """
-
-Dall-E then generated an image that best represents this sentence.
+Dall-E then generated an image from this text.
 
 See you in a few hours.
 (This post was totally automated.)
 ---------------------------------------------
-""" + hashtags_generator(words)
+""" + hashtags_generator(chatGPT_response)
     return caption
 
-def generate_prompt(words):
-    prompt = "Here are 10 random words: " + words + ". Compose a cohesive, well-written, artistic text that could inspire a beautiful work of art using these words. You can also specify the style of the artwork as well as the main colors that this sentence inspires you."
+def generate_prompt():
+    prompt = "Génère un court texte (4 phrases max) en anglais qui contient un être vivant (ou un mix de plusieurs) ainsi qu'une action et qui commence par 'A realistic photography of'. N'ajoute pas de texte supplémentaire car ta réponse va être copié collée pour Dall-E 2"
     return prompt
-
