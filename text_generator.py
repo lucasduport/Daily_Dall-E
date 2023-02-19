@@ -1,3 +1,4 @@
+import creds
 """
 from faker import Faker
 def words_generator():
@@ -21,7 +22,7 @@ def hashtags_generator(words):
     return hashtags[1:]
 
 def caption_generator(chatGPT_response):
-    caption = """ChatGPT using text-davinci-003 generated this short paragraph: """ + chatGPT_response + """
+    caption = """ChatGPT using """ + creds.getCreds()['model'] + """ generated this short paragraph: """ + chatGPT_response + """
 
 Dall-E then generated an image from this text.
 
@@ -32,5 +33,5 @@ See you in a few hours.
     return caption
 
 def generate_prompt():
-    prompt = "Génère un court texte (4 phrases max) en anglais qui contient un être vivant (ou un mix de plusieurs) ainsi qu'une action et qui commence par 'A realistic photography of'. N'ajoute pas de texte supplémentaire car ta réponse va être copié collée pour Dall-E 2"
+    prompt = """Créé un prompt d'environ 40 mots en anglais pour que Dall-E génère une photographie très originale et super réaliste. Ta réponse va être copiée collée en entrée pour Dall-E 2. Ta réponse doit commencer par "A realistic photography of"."""
     return prompt

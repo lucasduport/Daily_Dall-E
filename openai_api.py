@@ -2,7 +2,9 @@ import openai
 import creds
 
 openai.api_key = creds.getCreds()['open_ai_key']
-model = "text-davinci-003"
+
+model = creds.getCreds()['model']
+
 
 def use_chatGPT(prompt):
         response = openai.Completion.create(
