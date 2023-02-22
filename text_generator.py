@@ -10,15 +10,15 @@ def words_generator():
 """
 def hashtags_generator(words):
     hashtags = ""
-    nb_hashtags = 20
+    nb_hashtags = 19
     for word in words.split():
         if (nb_hashtags == 29):
             break
-        if len(word) < 3:
+        if len(word) < 4:
             continue
         hashtags += " #" + word
         nb_hashtags += 1
-    hashtags +=""" #art #artwork #artistic #dalle #ai #openai #chatgpt #words #inspiration #inspiring #beautiful #api #code #dev #iart #aiart #dalleart #artificial #intelligence"""
+    hashtags +=""" #art #artwork #artistic #dalle #ai #openai #chatgpt #nftart #nft #aiartist #beautiful #api #code #dev #iart #aiart #masterpiece #photography"""
     return hashtags[1:]
 
 def caption_generator(chatGPT_response):
@@ -33,5 +33,5 @@ See you in a few hours.
     return caption
 
 def generate_prompt():
-    prompt = """Créé un prompt d'environ 40 mots en anglais pour que Dall-E génère une photographie très originale et super réaliste. Ta réponse va être copiée collée en entrée pour Dall-E 2. Ta réponse doit commencer par "A realistic photography of"."""
+    prompt = creds.getCreds()['magic_prompt']
     return prompt
